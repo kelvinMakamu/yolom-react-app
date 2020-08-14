@@ -86,7 +86,7 @@ class ProductControl extends Component{
 		});
 	}
 
-	handleProductSelected = (id) =>{
+	handleProductSelected  = (id) =>{
 		const clickedProduct = this.state.products.filter(product => product.id === id)[0];
 		this.setState({
 			selectedProduct: clickedProduct
@@ -99,11 +99,11 @@ class ProductControl extends Component{
 		let buttonText   = "Go back to Product List";
 		//Components Toggling
 		if(this.state.selectedProduct != null){
-				visibleState = <ProductDetail product={this.state.selectedProduct}/>;
+				visibleState = <ProductDetail product = {this.state.selectedProduct}/>;
 		}else{
 			switch(this.state.productFormVisible){
 				case true:
-				visibleState = <NewProductForm productCreated={this.handleAddingNewProduct}/>;
+				visibleState = <NewProductForm productCreated = {this.handleAddingNewProduct}/>;
 				break;
 
 				default:
